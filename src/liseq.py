@@ -49,7 +49,7 @@ def liseq(x: Sequence[Any]) -> list[int]:
         else:
             # binary search (~ kind of)
             #if the next number is smaller AND the indices are non-consecutive
-            #   : is any of the numbers before the new upper limit bigger? -> update boundaries
+            #   : is any of the numbers before the new upper limit smaller? -> update boundaries
             
             #print("IT " + str(i))
             while upper - lower > 1:
@@ -67,7 +67,8 @@ def liseq(x: Sequence[Any]) -> list[int]:
 
             j = lower #update the upper boundary with the position of the small value 
 
-        ##if we are comparing the next number OR we have set a new upper boundary
+        ##if we are comparing the next number OR 
+        # we have set a new upper boundary including an increasing set
         if j == min_len or x[i] < x[indices[j]]:
             indices[j] = i
             ## set the next iteration upper boundary: go to the next position (j+1)
