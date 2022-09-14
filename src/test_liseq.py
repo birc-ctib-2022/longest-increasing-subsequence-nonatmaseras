@@ -12,4 +12,4 @@ def test_special_cases() -> None:
 
 def test_your_own_tests() -> None:
     """Add your own tests below."""
-    assert False, "Write tests!"  # <- to get your attention
+    assert liseq([12, 45, 32, 65, 78, 23, 35, 45, 57]) == [0, 5, 6, 7, 8] # <- to get your attention
